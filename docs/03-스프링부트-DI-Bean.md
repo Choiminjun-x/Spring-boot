@@ -32,12 +32,14 @@
 class EmailSender implements NotificationSender { }
 ```
 
-| 어노테이션 | 붙이는 자리 |
-|---|---|
-| `@Component` | 일반 |
-| `@Service` | 비즈니스 로직 |
-| `@Repository` | DB 접근 |
+
+| 어노테이션                             | 붙이는 자리    |
+| --------------------------------- | --------- |
+| `@Component`                      | 일반        |
+| `@Service`                        | 비즈니스 로직   |
+| `@Repository`                     | DB 접근     |
 | `@Controller` / `@RestController` | 요청을 받는 자리 |
+
 
 - **방법 B** — 만드는 방법을 직접 써준다 → 메서드가 반환한 객체를 Bean으로 등록한다
 
@@ -86,6 +88,8 @@ public class MyApplication {
 
 - 톰캣이 라이브러리로 jar 안에 들어 있다
 - `SpringApplication.run()`이 그걸 켜서 포트를 잡는다
+
+## &gt;&gt;&gt;&gt; 스프링에서 설정값은 어디서 설정하는가? 
 
 ## 지금까지의 흐름(서버가 뜰 때 일어나는 일)
 
@@ -175,3 +179,4 @@ OrderService(@Qualifier("email") NotificationSender sender) { ... }
 @Primary
 class EmailSender implements NotificationSender { }
 ```
+
