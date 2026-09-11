@@ -11,6 +11,10 @@ public class Post {
         this.content = content;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -18,6 +22,8 @@ public class Post {
     public String getContent() {
         return content;
     }
+
+    public void assignId(Long id) { this.id = id; }
 
     public void update(String title, String content) {
         validate(title, content);
